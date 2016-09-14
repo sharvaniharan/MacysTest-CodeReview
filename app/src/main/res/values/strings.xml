@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Macys SD Viewer</string>
+    <string name="title_activity_files_list">List of Files</string>
+    <string name="files_scanned">Files Scanned</string>
+    <string name="more">More Statistics</string>
+    <string name="no_sdcard_message">No SD Card Found</string>
+    <string name="scanning">Scanning SD Card for Files . . .</string>
+    <string name="scan_complete">Scan Completed !</string>
+    <string name="scan_stopped">Scan stopped! Partial Results will be loaded in few seconds . . .</string>
+    <string name="scan_partial">Scan stopped! Partial Results</string>
+    <string name="biggest_file_names">10 Biggest Files</string>
+    <string name="biggest_file_sizes">Sizes</string>
+    <string name="frequent_extensions">5 Most Frequent Extensions</string>
+    <string name="frequency">Frequency</string>
+    <string name="bonus">Bonus - File Viewer for SD Card Files</string>
+    <string name="sdcard_file_viewer">SD CARD FILE VIEWER</string>
+</resources>

@@ -19,20 +19,28 @@ import com.macystest.sharvani.macystest.async.ScanAsync;
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * Created by Sharvani on 9/13/16.
+ * FilesListActivity - Created to be the central place to display
+ * the FS of SD Card with GUI
+ * Maintains instances of its adapter
+ * Maintains UI Handles
+ */
 public class FilesListActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     FolderAdapter folderAdapter;
-TextView textView;
+    TextView textView;
     File file;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_files_list);
         String folder = getIntent().getStringExtra("FILEPATH");
-       file=new File(folder);
+        file = new File(folder);
         recyclerView = (RecyclerView) findViewById(R.id.fileslist);
-        textView= (TextView) findViewById(R.id.folder_message_textview);
-        new ScanAsync(FilesListActivity.this,folder).execute();
+        textView = (TextView) findViewById(R.id.folder_message_textview);
+        new ScanAsync(FilesListActivity.this, folder).execute();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -49,10 +57,10 @@ TextView textView;
 
     public void setList(ArrayList<File> fileList, int totalFiles) {
         //numOfFiles.setText("" + (totalFiles - fileList.size()));
-        if(fileList.isEmpty()){
+        if (fileList.isEmpty()) {
             textView.setText("NO FILES");
-        }else {
-            textView.setText(file.getName()+" has "+totalFiles+" files");
+        } else {
+            textView.setText(file.getName() + " has " + totalFiles + " files");
             folderAdapter = new FolderAdapter(this, fileList);
             recyclerView.setAdapter(folderAdapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -60,8 +68,8 @@ TextView textView;
     }
 
     public void refreshPage(String name) {
-        Intent intent=new Intent(getApplicationContext(),FilesListActivity.class);
-        intent.putExtra("FILEPATH",name);
+        Intent intent = new Intent(getApplicationContext(), FilesListActivity.class);
+        intent.putExtra("FILEPATH", name);
         //finish();
         startActivity(intent);
     }

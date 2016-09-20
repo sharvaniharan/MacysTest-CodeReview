@@ -7,14 +7,20 @@ import android.os.Bundle;
 
 import com.macystest.sharvani.macystest.R;
 
+/**
+ * Created by Sharvani on 9/13/16.
+ * Result Activity - Created for a landing place for notifications
+ */
 public class ResultActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-       NotificationManager manager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
-        manager .cancelAll();
+
+        //Cancels Notifications after load
+        NotificationManager manager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.cancelAll();
 
     }
 }

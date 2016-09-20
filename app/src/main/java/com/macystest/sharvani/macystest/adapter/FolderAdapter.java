@@ -42,7 +42,6 @@ public class FolderAdapter extends RecyclerView.Adapter<FolderAdapter.FolderVH> 
     @Override
 
     public FolderVH onCreateViewHolder(ViewGroup parent, int viewType) {
-
         View view = inflater.inflate(R.layout.custom_row_recycler, parent, false);
         FolderVH vh = new FolderVH(view);
 

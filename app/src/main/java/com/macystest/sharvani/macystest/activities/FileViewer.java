@@ -5,13 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
 import com.macystest.sharvani.macystest.R;
 import com.macystest.sharvani.macystest.adapter.FolderAdapter;
-
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * Created by Sharvani on 9/13/16.
+ * FileViewer - Created to view file structure
+ * Maintains instances of its adapter. Calls itself recursively
+ * Maintains UI Handles
+ */
 public class FileViewer extends AppCompatActivity {
     ArrayList<File> fileListForFileViewer = new ArrayList<>();
     RecyclerView recyclerView;

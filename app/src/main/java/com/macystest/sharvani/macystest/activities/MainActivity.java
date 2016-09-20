@@ -14,17 +14,20 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import com.macystest.sharvani.macystest.R;
 import com.macystest.sharvani.macystest.adapter.BiggestFilesAdapter;
 import com.macystest.sharvani.macystest.adapter.FrequencyAdapter;
 import com.macystest.sharvani.macystest.async.ScanAsync;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
+/**
+ * Created by Sharvani on 9/13/16.
+ * MainActivity - Created for the central place for behavioral code.
+ * Maintains instances of all adapters
+ * Maintains UI Handles
+ */
 public class MainActivity extends AppCompatActivity {
     RecyclerView biggestFiles, frequency;
     TextView numOfFiles;

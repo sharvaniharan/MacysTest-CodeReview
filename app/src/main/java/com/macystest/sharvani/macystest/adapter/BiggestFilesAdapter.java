@@ -19,6 +19,7 @@ import java.util.List;
 
 /**
  * Created by Sharvani on 9/13/16.
+ * Adapter to hold information on largest files of the SD Card
  */
 public class BiggestFilesAdapter extends RecyclerView.Adapter<BiggestFilesAdapter.BiggestVH> {
     Activity activity;

@@ -28,6 +28,7 @@ import java.util.List;
  * Maintains instances of all adapters
  * Maintains UI Handles
  */
+
 public class MainActivity extends AppCompatActivity {
     RecyclerView biggestFiles, frequency;
     TextView numOfFiles;
